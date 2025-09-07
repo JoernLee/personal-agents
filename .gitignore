@@ -25,11 +25,13 @@ MANIFEST
 
 # 虚拟环境
 venv/
+ven312/
 env/
 ENV/
 env.bak/
 venv.bak/
 .venv/
+.venv312/
 
 # 环境变量文件
 .env
