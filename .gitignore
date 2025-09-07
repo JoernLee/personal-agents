@@ -25,7 +25,7 @@ MANIFEST
 
 # 虚拟环境
 venv/
-ven312/
+venv312/
 env/
 ENV/
 env.bak/
