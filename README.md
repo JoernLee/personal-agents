@@ -4,27 +4,27 @@
 
 ## 环境要求
 
-- Python 3.8+ (推荐 3.12)
-- 虚拟环境 (venv)
+- Python 3.12.4 (已安装)
+- 虚拟环境 (venv312)
 
 ## 快速开始
 
 ### 1. 创建虚拟环境
 
 ```bash
-python -m venv venv
+py -3.12 -m venv venv312
 ```
 
 ### 2. 激活虚拟环境
 
 **Windows:**
 ```bash
-venv\Scripts\activate
+venv312\Scripts\activate
 ```
 
 **Linux/macOS:**
 ```bash
-source venv/bin/activate
+source venv312/bin/activate
 ```
 
 ### 3. 安装依赖
@@ -59,11 +59,13 @@ personal-agents/
 
 ## 已安装的库
 
-- **langchain** (0.2.17) - LangChain 核心库
-- **langchain-core** (0.2.43) - LangChain 核心组件
-- **streamlit** (1.40.1) - Web 应用框架
-- **pandas** (2.0.3) - 数据处理库
-- **python-dotenv** (1.0.1) - 环境变量管理
+- **langchain** (0.3.27) - LangChain 核心库
+- **langchain-community** (0.3.29) - LangChain 社区扩展库
+- **langchain-core** (0.3.75) - LangChain 核心组件
+- **streamlit** (1.49.1) - Web 应用框架
+- **pandas** (2.3.2) - 数据处理库
+- **openai** (1.106.1) - OpenAI API 客户端
+- **python-dotenv** (1.1.1) - 环境变量管理
 
 ## 支持的模型
 
