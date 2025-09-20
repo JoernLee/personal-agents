@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from langchain.prompts import PromptTemplate
 from langchain_community.chat_models import ChatOpenAI
 from langchain.output_parsers import ResponseSchema, StructuredOutputParser
+from langchain_core.runnables import RunnableLambda
 
 
 load_dotenv()
@@ -34,7 +35,13 @@ summary_prompt = PromptTemplate.from_template("请从下面这段新闻内容中
 
 summary_chain = summary_prompt.partial(format_instructions=parser.get_format_instructions()) | llm | parser
 
-full_chain = news_chain | summary_chain
+def debug_print(x):
+    print("中间结果（新闻正文）:", x)
+    return x
+
+debug_node = RunnableLambda(debug_print)
+
+full_chain = news_chain | debug_node | summary_chain
 
 result = full_chain.invoke({"title": "苹果近日在加州发布了AI芯片"})
 
